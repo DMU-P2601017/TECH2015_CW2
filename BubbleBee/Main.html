@@ -1,0 +1,172 @@
+<!DOCTYPE html>
+<html lang="en" dir="ltr">
+  <head>
+    <!--Every html page contains a head section, which contains information like
+    title of page, links to other pages (for instance css or javascript) and settings.-->
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <!--Allows content to be responsible.-->
+    <title>Bubble Bee</title>
+    <link rel="stylesheet" href="stylesheet.css">
+    <!--CSS page is linked to this html and contains additional styling of the page.-->
+  </head>
+  <body>
+    <!--Body is main section of the page, which consists of menu, some text and images, links
+  to other pages and many more. Footer is the last section of body.-->
+    <div class="firstMenu">
+    <div id="NavMenu">
+      <nav>
+      <ul>
+        <li class="logo">BubbleBee</li>
+        <a href="Main.html"><li class="menuItem">HOME</li></a>
+        <div class="menuItem dropdown">
+         <li class="dropbutton">SHOP</li>
+          <div class="dropdown-content">
+           <a href="Macarons.html"><li>LIMITED EDITION</li></a>
+           <a href="PinkPower.html"><li>BABY PINK POWER</li></a>
+          </div>
+        </div>
+        <a href="AboutUs.html"><li class="menuItem">ABOUT US</li></a>
+      </ul>
+      <img src="images/Cart.png" alt="Cart" class="menuCart" />
+    </nav>
+    </div>
+  </div>
+  <!--This section was named as firstMenu <div> and is visible on browser on resolution
+  1000px and more. It was later on styled in CSS. It has lists items <li> in the
+unordered list <ul> under the navigation <nav> bar. Lists items contain text and some contain
+links to other created pages <a>. Whole content falls under the container
+"NavMenu" <div id>, which will help to add instructions to the whole navigation
+bar later in javascript.-->
+
+  <div class="secMenu" id="NavMenu">
+
+    <div id="HamMenu" class="sideMenu">
+      <a href="javascript:void(0)" class="closeButton" onclick="closeNav()">×</a>
+      <a href="Main.html">HOME</a>
+      <a href="Macarons.html">LIMITED EDITION</a>
+      <a href="PinkPower.html">BABY PINK POWER</a>
+      <a href="AboutUs.html">ABOUT</a>
+    </div>
+    <div class="logo">BubbleBee</div>
+
+    <button class="openButton" onclick="openNav()">☰</button>
+   <img src="images/Cart.png" alt="Cart" class="navIcon" />
+  </div>
+ <!--This section contains second menu <div secMenu>, which is only visible if resolution
+ is less than 1000px and also on mobile. It has some classes to help to style and animate
+ the content like "openButton" or "sideMenu" and contains same links <a> like first menu.
+ Logo was also moved to the center and icon of the cart was added <img>.-->
+
+ <center>
+   <!--Content was aligned to the center.-->
+    <img src="images/bubble-bee.png" alt="Bubble Bee brand" width="100%" />
+    <!--Image was uploaded to the folder images and then pasted here via source <src>.
+  It has alternate text, if image would not load for the viewer <alt> and width of
+100% for fully scalable image.-->
+    <p>We've been working on this special recipe for years
+      to give you the most luxuriously sweet experience when
+      taking a bath with our special bath bombs.</p>
+  <!--<p> property contains simple text.-->
+      <video controls="true" width="80%" poster="images/VideoThumbnail.png">
+      <source src="video/video.mp4" type='video/mp4' />
+      <source src="video/video.ogg" type='video/ogg' />
+      <p>Upps, something went wrong! Download the video
+       <a href='video/video.mp4'>here</a>.</p>
+     </video>
+<!--This section consists of video element, which allows to upload any downloaded
+video and show itself on the website. Controls were made available by "true" property,
+width was set up to 80% and "poster" allows viewer to see opening image on top of video.
+It contains videos with same content, but different formats to make it accessible for
+as many browsers as possible. If in any case video will not load, it can be downloaded
+via link <a> shared above.-->
+
+    <p>This video showcases how bath bombs are used and how water magically changes the
+      colour depending on the type of bath bomb!</p>
+
+    <p>Created with love and passion, each bath bomb
+      consists of your favourite childhood memories scents.</p>
+
+    <div class="macaronsBackground">
+    <h1>@OhSoSweet</h1>
+    <p>Our premium and limited box contains
+      10 beautifully scented bath bombs with
+      very unique fragrances!</p>
+    <img src="images/PremiumBox2.png" alt="Premium Box of Macarons Bath Bombs"
+    width="80%" class="mainSpacing"/>
+    <button class="cart"><a href="Macarons.html"> <h2>ORDER IT NOW</h2> </a></button>
+    <p>ONLY FOR £14.99 AND GET ONE FREE FOR YOUR BESTIE!</p>
+  </div>
+  <!--This section contains information block with some text <p>, headings <h1,h2>, image
+<img> and button, that allows consumers access the link after clicking. Button also contains
+class "cart", which is further styled in the stylesheet.-->
+
+    <footer>
+      <div class="footer">
+      <li class="logoF">BubbleBee</li>
+      <a href="AboutUs.html"><p>About Us</p></a>
+      <a href="Macarons.html"><p>Premium Products</p></a>
+      <a href="AboutUs.html"><p>Contact Us</p>
+      <a href="Main.html"><p>Home</p></a>
+
+      <a href="https://www.facebook.com/lush/" target="blank"><img src="images/Facebook.png" width="50px"/></a>
+      <a href="https://twitter.com/LushLtd?ref_src=twsrc%5Egoogle%7Ctwcamp%5Eserp%7Ctwgr%5Eauthor" target="blank"><img src="images/Twitter.png" width="41px"/></a>
+      <a href="https://www.instagram.com/lush/?hl=en" target="blank"><img src="images/Instagram.png" width="41px"/></a>
+    </div>
+    </footer>
+<!--Footer is the last section of this page, which can be visible to viewer. It summarizes
+important links <a> and information, to make website more organized and
+find content easily. It also provides access to social medias <a img>. These have been
+put inside <a> link tag as images <img> and having "blank" property to open the link
+in the new tab. Images' width is set up in "px" to keep sizing of icons the same no matter
+what resolution is the browser.-->
+ </center>
+  </body>
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.1.1/gsap.min.js"> </script>
+<!--Script section is for javascript code. Line above includes source to the link, which
+ allows gsap animation to be visible and active.-->
+
+  <script>
+gsap.from('.menuItem', { y: -300, ease: "bounce.out", stagger: 0.3});
+/* This line contains information of from where animation comes from "y",
+which effect is happening during animation "ease" and how long it takes
+it to animate "stagger". Stagger is special type of animation which allows
+elements within the id container to be animated seperately, creating interesting
+staircase effect.*/
+
+
+window.onscroll = function() {myFunction()};
+var NavMenu = document.getElementById("NavMenu");
+var sticky = NavMenu.offsetTop;
+function myFunction() {
+  if (window.pageYOffset >= sticky) {
+    NavMenu.classList.add("sticky")
+  } else {
+    NavMenu.classList.remove("sticky");
+  }
+}
+/*Code above is designed to make navigation bar stick to the top on scroll, making
+the menu accessible at all times. It was inspired by :
+https://www.w3schools.com/howto/howto_js_navbar_sticky.asp.
+Function is happening, when "var NavMenu" is out of its position "var sticky".
+This could have been made by setting position to fixed in css instead, but javascript
+implementation seemed easier.  */
+</script>
+
+<script>
+function openNav() {
+  document.getElementById("HamMenu").style.width = "250px";
+}
+
+function closeNav() {
+  document.getElementById("HamMenu").style.width = "0";
+}
+
+/*This javascript section allows the second, hamburger menu to open and close
+itself with specific width. When navigation is opened "function openNav ()",
+content inside has width of 250px. When navigation is closed "function closeNav ()",
+content inside is not visible as it has 0px.
+It was inspired by: https://www.w3schools.com/howto/howto_js_collapse_sidepanel.asp. */
+</script>
+
+</html>
